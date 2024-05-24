@@ -28,6 +28,8 @@ app.get("/users", (req, res) => {
 	});
 });
 
+// pegar por ID
+
 app.get("/users/:id", (req, res) => {
 	const id = req.params.id;
 	db.all("SELECT * FROM users WHERE id = ?", id, (error, rows) => {
